@@ -29,3 +29,6 @@ class pygsheetsExt:
         res = col[r]
         return res
         
+
+    def getData(sheetName):
+        pass
