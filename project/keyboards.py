@@ -16,8 +16,8 @@ class keyboards:
     sheets_kb = [
         [types.KeyboardButton(text="Главное меню 🔙")],
         [types.KeyboardButton(text="Цвет")],
-        [types.KeyboardButton(text="Таблица2")],
-        [types.KeyboardButton(text="Таблица3")],
+        [types.KeyboardButton(text="Раса")],
+        [types.KeyboardButton(text="Класс")],
         [types.KeyboardButton(text="Таблица4")],
         [types.KeyboardButton(text="Таблица5")]
     ]

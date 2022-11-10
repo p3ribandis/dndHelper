@@ -31,4 +31,8 @@ class pygsheetsExt:
         
 
     def getData(sheetName):
-        pass
+        wks = pygsheetsExt.sh.worksheet_by_title(sheetName)
+        col = wks.get_col(1, returnas='matrix', include_tailing_empty=False)
+        r = random.randint(0, len(col)-1)
+        res = col[r]
+        return res

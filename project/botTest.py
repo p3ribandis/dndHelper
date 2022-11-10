@@ -50,9 +50,9 @@ async def roll_dice(message: types.Message, regexp):
 #-----
 
 #Таблички
-@dp.message_handler(Text("Цвет"))
-async def get_character(message: types.Message):
-    m = pygsheetsExt.getColor()
+@dp.message_handler()
+async def get_sheet_data(message: types.Message):
+    m = pygsheetsExt.getData(message.text)
     await message.answer(m)
 #----
 
