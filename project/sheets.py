@@ -21,14 +21,6 @@ class pygsheetsExt:
 
          #share the sheet with your friend
         sh.share("yaroslav.nasarenko@gmail.com")
-    
-    def getColor():
-        wks = pygsheetsExt.sh.worksheet_by_title('Карапакс')
-        col = wks.get_col(1, returnas='matrix', include_tailing_empty=False)
-        r = random.randint(0, len(col)-1)
-        res = col[r]
-        return res
-        
 
     def getData(sheetName):
         wks = pygsheetsExt.sh.worksheet_by_title(sheetName)
@@ -36,3 +28,9 @@ class pygsheetsExt:
         r = random.randint(0, len(col)-1)
         res = col[r]
         return res
+
+    def set_new_worksheet(name, content):
+        wks = pygsheetsExt.sh.add_worksheet(name)
+        for i in range(1, len(content), 2):
+            wks.update_value(('A' + str(i if i < 2 else i - 1)), content[i].text)
+        print('ready')

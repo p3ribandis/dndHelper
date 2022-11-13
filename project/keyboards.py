@@ -17,14 +17,14 @@ class keyboards:
         [types.KeyboardButton(text="Главное меню 🔙")],
         [types.KeyboardButton(text="Цвет")],
         [types.KeyboardButton(text="Раса")],
-        [types.KeyboardButton(text="Класс")],
+        [types.KeyboardButton(text="Класс")], 
         [types.KeyboardButton(text="Таблица4")],
         [types.KeyboardButton(text="Таблица5")]
     ]
 
     sheets_kb_style = types.ReplyKeyboardMarkup(
         keyboard=sheets_kb,
-        resize_keyboard=True,
+        resize_keyboard=False,
         input_field_placeholder='Выберите таблицу'
     )
 
