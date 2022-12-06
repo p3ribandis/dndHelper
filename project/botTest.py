@@ -6,20 +6,18 @@ from sheets import pygsheetsExt
 from aiogram import *
 from aiogram.dispatcher.filters import Text
 
-
 API_TOKEN = '5724628929:AAFwpDIs93caCBxxa50DorFq_YptQX3d8Yc'
-
 
 # Configure logging
 
 logging.basicConfig(level=logging.INFO)
-
 
 # Initialize bot and dispatcher
 
 bot = Bot(token=API_TOKEN)
 
 dp = Dispatcher(bot)
+
 
 
 #What user see after start command

@@ -1,5 +1,5 @@
 from aiogram import types, utils
-
+import keyboard_creator as kc
 
 class keyboards:
     main_kb = [
@@ -13,14 +13,13 @@ class keyboards:
         input_field_placeholder='Выберите подраздел'
     )
 
+    sheets_names = kc.keyboard_creator.get_sheets_names()
+
     sheets_kb = [
-        [types.KeyboardButton(text="Главное меню 🔙")],
-        [types.KeyboardButton(text="Цвет")],
-        [types.KeyboardButton(text="Раса")],
-        [types.KeyboardButton(text="Класс")], 
-        [types.KeyboardButton(text="Таблица4")],
-        [types.KeyboardButton(text="Таблица5")]
+        [types.KeyboardButton(text="Главное меню 🔙")]
     ]
+    for name in sheets_names:
+        sheets_kb.append([types.KeyboardButton(text = name)])
 
     sheets_kb_style = types.ReplyKeyboardMarkup(
         keyboard=sheets_kb,
